@@ -256,7 +256,7 @@ export default function Home() {
             </div>
             <div>
               <a
-                href="https://twitter.com/dannybabs"
+                href="https://twitter.com/kng_lax"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-gray-400 hover:text-black transition-colors"
@@ -272,6 +272,17 @@ export default function Home() {
                 className="text-sm text-gray-400 hover:text-black transition-colors"
               >
                 GitHub
+              </a>
+            </div>
+
+            <div>
+              <a
+                href="https://www.linkedin.com/in/dannybabs/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-gray-400 hover:text-black transition-colors"
+              >
+                LinkedIn
               </a>
             </div>
           </div>
