@@ -12,7 +12,7 @@ export default function ResponsiveHeader() {
             {/* Logo */}
             <div className="flex items-center gap-2">
                 <Image src="/images/logo.png" alt="logo" width={50} height={50} />
-                <span className="font-bold text-nav-link text-lg hidden sm:inline">Daniel Babalola</span>
+               
             </div>
             {/* Socials and Nav Toggle (Desktop) */}
             <div className="hidden md:flex items-center gap-4">
