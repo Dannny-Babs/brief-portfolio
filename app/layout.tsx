@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
-import { Rethink_Sans } from "next/font/google";
+import { Rethink_Sans, Darker_Grotesque } from "next/font/google";
 import "./globals.css";
 
 const rethinkSans = Rethink_Sans({
   variable: "--font-rethink-sans",
+  subsets: ["latin"],
+});
+
+const darkerGrotesque = Darker_Grotesque({
+  variable: "--font-darker-grotesque",
   subsets: ["latin"],
 });
 
@@ -20,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${rethinkSans.variable} font-[family-name:var(--font-rethink-sans)] antialiased bg-white text-black`}
+        className={`${rethinkSans.variable} ${darkerGrotesque.variable} font-[family-name:var(--font-rethink-sans)] antialiased bg-white text-black`}
       >
         {children}
       </body>

@@ -50,6 +50,7 @@ body {
   --color-nav-link: var(--nav-link);
   --color-primary-text: var(--primary-text);
   --color-secondary-text: var(--secondary-text);
+  
 }
 
 :root {
@@ -90,7 +91,8 @@ body {
   --pattern: hsla(30, 22%, 29%, 0.35);
   --nav-link: hsla(30, 22%, 39%, 1);
   --primary-text: hsla(32, 36%, 66%, 1);
-  --secondary-text: hsla(32, 21%, 45%, 1)
+  --secondary-text: hsla(32, 21%, 45%, 1);
+  --font-darker-grotesque: "Darker Grotesque", sans-serif;
 }
 
 .dark {

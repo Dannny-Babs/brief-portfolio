@@ -58,7 +58,7 @@ export default function ResponsiveHeader() {
             {/* Mobile Nav Toggle */}
             <div className="md:hidden">
                 <Dialog open={open} onOpenChange={setOpen}>
-                    <DialogTrigger asChild>
+                    <DialogTrigger asChild className="text-nav-link">
                         <button className="w-8 h-8 flex items-center justify-center rounded bg-nav-link/10">
                             <span className="sr-only">Open navigation</span>
                             <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-nav-link"><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="18" x2="21" y2="18" /></svg>
