@@ -4,6 +4,36 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import ResponsiveHeader from "@/components/ResponsiveHeader";
 import AsciiWelcome from "@/components/ascii-welcome";
+import Link from "next/link";
+import { Linkedin } from "lucide-react";
+import { Github } from "lucide-react";
+import { Twitter } from "lucide-react";
+import { Instagram } from "lucide-react";
+import { useEffect, useState } from "react";
+import SelectedWorks from "@/components/SelectedWorks";
+
+function LastVisitorLocation() {
+    const [location, setLocation] = useState<string>("...");
+
+    useEffect(() => {
+        fetch("https://ipapi.co/json/")
+            .then(res => res.json())
+            .then(data => {
+                if (data && (data.city || data.country_name)) {
+                    setLocation(`${data.city ? data.city + ', ' : ''}${data.country_name || ''}`);
+                } else {
+                    setLocation("Unknown");
+                }
+            })
+            .catch(() => setLocation("Unknown"));
+    }, []);
+
+    return (
+        <p className="text-secondary-text text-center">
+            Last visitor from: <span className="text-primary-text font-medium">{location}</span>
+        </p>
+    );
+}
 
 export default function Home() {
     const getDate = () => {
@@ -21,9 +51,9 @@ export default function Home() {
                 "screen-line-before screen-line-after before:-top-px     after:-bottom-px",
                 "bg-dots text-secondary-text"
             )} >
-                 <AsciiWelcome interval={4000} />
+                <AsciiWelcome interval={4000} />
             </div>
-     
+
 
             <div className={cn(
                 "max-w-5xl border-r-[1.5px] border-l-[1.5px] border-b-[1.5px] border-dark-border mx-auto ",
@@ -164,120 +194,12 @@ export default function Home() {
                     </h3>
                 </div>
             </div>
-            <div className="w-full max-w-5xl border-r-[1.5px] border-l-[1.5px] border-b-[1.5px] border-dark-border mx-auto grid grid-cols-1 md:grid-cols-3 ">
-                <div className="flex flex-col h-full col-span-1">
-                    <div className="relative w-full aspect-[4/3] border-r-[1.5px] border-b-[1.5px] border-dark-border overflow-hidden">
-                        <Image src="/images/work1.png" alt="work1" fill className="object-cover" />
-                        <div className="absolute bottom-0 left-0 right-0 bg-dark-background/80 p-4">
-                            <h4 className="text-primary-text tracking-wide text-lg font-medium leading-tight">
-                                MedMelanin Website
-                            </h4>
-                            <p className="text-secondary-text text-[15px] font-medium leading-tight">
-                                30+ page site with CMS, SEO, automations.                            </p>
-                        </div>
-                    </div>
-                    <div className="relative w-full aspect-[4/3] border-r-[1.5px] border-b-[1.5px] border-dark-border overflow-hidden">
-                        <Image src="/images/work1.png" alt="work1" fill className="object-cover" />
-                        <div className="absolute bottom-0 left-0 right-0 bg-dark-background/80 p-4">
-                            <h4 className="text-primary-text tracking-wide text-lg font-medium leading-tight">
-                                Inclusivio
-                            </h4>
-                            <p className="text-secondary-text text-[15px] font-medium leading-tight">
-                                Accessibility compliance checker with full dashboard UX
-                            </p>
-                        </div>
-                    </div>
-                    <div className="relative w-full aspect-[4/3] border-r-[1.5px]  border-dark-border overflow-hidden">
-                        <Image src="/images/work1.png" alt="work1" fill className="object-cover" />
-                        <div className="absolute bottom-0 left-0 right-0 bg-dark-background/80 p-4">
-                            <h4 className="text-primary-text tracking-wide text-lg font-medium leading-tight">
-                                Talo
-                            </h4>
-                            <p className="text-secondary-text text-[15px] font-medium leading-tight">
-                                Job search and ATS platform with AI insights
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-                <div className="flex flex-col h-full col-span-1">
-                    <div className="relative w-full aspect-[4/3] border-r-[1.5px] border-b-[1.5px] border-dark-border overflow-hidden">
-                        <Image src="/images/work1.png" alt="work1" fill className="object-cover" />
-                        <div className="absolute bottom-0 left-0 right-0 bg-dark-background/80 p-4">
-                            <h4 className="text-primary-text tracking-wide text-lg font-medium leading-tight">
-                                Sortee
-                            </h4>
-                            <p className="text-secondary-text text-[15px] font-medium leading-tight">
-                                Pitch Decks + Brand Design Exploration for a startup
-                            </p>
-                        </div>
-                    </div>
-                    <div className="relative w-full aspect-[4/3] border-r-[1.5px] border-b-[1.5px] border-dark-border overflow-hidden">
-                        <Image src="/images/work1.png" alt="work1" fill className="object-cover" />
-                        <div className="absolute bottom-0 left-0 right-0 bg-dark-background/80 p-4">
-                            <h4 className="text-primary-text tracking-wide text-lg font-medium leading-tight">
-                                MedMelanin App
-                            </h4>
-                            <p className="text-secondary-text text-[15px] font-medium leading-tight">
-                                Health advocacy platform designed for women of colour
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="relative w-full aspect-[4/3] border-r-[1.5px]  border-dark-border overflow-hidden">
-                        <Image src="/images/work1.png" alt="work1" fill className="object-cover" />
-                        <div className="absolute bottom-0 left-0 right-0 bg-dark-background/80 p-4">
-                            <h4 className="text-primary-text tracking-wide text-lg font-medium leading-tight">
-                                Spectraum
-                            </h4>
-                            <p className="text-secondary-text text-[15px] font-medium leading-tight">
-                                E-commerce app for neurodivergent users
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-                <div className="flex flex-col h-full col-span-1">
-                    <div className="relative w-full aspect-[4/3]  border-b-[1.5px] border-dark-border overflow-hidden">
-                        <Image src="/images/work3.png" alt="work3" fill className="object-cover" />
-                        <div className="absolute bottom-0 left-0 right-0 bg-dark-background/80 p-4">
-                            <h4 className="text-primary-text tracking-wide text-lg font-medium leading-tight">
-                                Marathon
-                            </h4>
-                            <p className="text-secondary-text text-[15px] font-medium leading-tight">
-                                AI Sales Enablement Platform
-                            </p>
-                        </div>
-                    </div>
-                    <div className="relative w-full aspect-[4/3]  border-b-[1.5px] border-dark-border overflow-hidden">
-                        <Image src="/images/work1.png" alt="work1" fill className="object-cover" />
-                        <div className="absolute bottom-0 left-0 right-0 bg-dark-background/80 p-4">
-                            <h4 className="text-primary-text tracking-wide text-lg font-medium leading-tight">
-                                Tally
-                            </h4>
-                            <p className="text-secondary-text text-[15px] font-medium leading-tight">
-                                Personal finance tracker with AI insights
-                            </p>
-                        </div>
-                    </div>
-                    <div className="relative w-full aspect-[4/3]   border-dark-border overflow-hidden">
-                        <Image src="/images/work1.png" alt="work1" fill className="object-cover" />
-                        <div className="absolute bottom-0 left-0 right-0 bg-dark-background/80 p-4">
-                            <h4 className="text-primary-text tracking-wide text-lg font-medium leading-tight">
-                                Juniper
-                            </h4>
-                            <p className="text-secondary-text text-[15px] font-medium leading-tight">
-                                Smart apartment search with onboarding & investment tools
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <SelectedWorks />
             <div className={cn(
                 "max-w-5xl border-r-[1.5px] border-l-[1.5px] border-b-[1.5px] border-dark-border mx-auto  ",
-                "flex flex-row items-center w-full justify-between"
+                "flex md:flex-row flex-col items-center w-full justify-between"
             )}>
-                <div className="flex flex-col text-left  p-4 md:p-8 border-r-[1.5px] border-dark-border bg-dots">
+                <div className="flex flex-col text-left  p-4 md:p-8  border-dark-border">
                     <h5 className="text-lg font-medium text-primary-text ">
                         I&apos;m Daniel. A pixel alchemist, problem solver, and passionate human.
                         I design, build, and learn in public. Imperfectly perfect and always evolving.
@@ -295,20 +217,49 @@ export default function Home() {
 
 
                 </div>
-                <div className="flex flex-col h-full  p-4 md:p-8">
-                    <div className="flex flex-row items-center gap-2">
-                        <Image src="/images/me.png" alt="me" width={240} height={320}  />
+                <div className="flex flex-col h-full w-full md:w-1/2 items-center justify-center border-t-[1.5px] border-l-[0px] border-dark-border md:border-t-0 md:border-l-[1.5px]  p-4 md:p-8 bg-dots">
+                    <div className="flex flex-row items-center gap-2 ">
+                        <Image src="/images/me.png" alt="me" width={240} height={320} />
                     </div>
                 </div>
             </div>
             <div className={cn(
-                "max-w-5xl border-r-[1.5px] border-l-[1.5px] border-b-[1.5px] border-dark-border mx-auto p-4 md:p-8",
+                "max-w-5xl border-r-[1.5px] border-l-[1.5px] border-b-[1.5px] border-dark-border mx-auto p-4 md:p-13",
                 "flex flex-row items-center w-full justify-between"
             )}>
-                <div className="flex flex-col gap-2">
-                    <h3 className="text-lg font-medium text-secondary-text ">
-                        SELECTED WORKS
+                <div className="flex flex-col gap-2 w-full items-center">
+                    <h3 className="text-3xl font-semibold tracking-tight text-secondary-text text-center">
+                        Let&apos;s Work Together
+
+                        <br />
+                        <span className="text-primary-text">
+                            <a href="mailto:dbabs297@gmail.com" className="text-primary-text underline">Get in touch</a>
+
+                        </span>
                     </h3>
+                </div>
+            </div>
+            <div className={cn(
+                "max-w-5xl border-r-[1.5px] border-l-[1.5px] border-b-[1.5px] border-dark-border mx-auto p-8 md:p-8  text-secondary-text    ",
+                "flex md:flex-row flex-col items-center w-full justify-between"
+            )}>
+                <div className="flex md:flex-row flex-col gap-2 w-full justify-between items-center  ">
+                    <div className="flex flex-row items-center gap-2">
+                        <Link href="https://www.linkedin.com/in/danny-babs/" className="text-secondary-text text-sm rounded-full p-2 bg-dark-background border-[1.5px] border-dark-border hover:bg-primary-text hover:text-dark-background transition-all duration-300">
+                            <Linkedin className="w-4 h-4" />
+                        </Link>
+                        <Link href="https://github.com/danielbabalola" className="text-secondary-text text-sm rounded-full p-2 bg-dark-background border-[1.5px] border-dark-border hover:bg-primary-text hover:text-dark-background transition-all duration-300">
+                            <Github className="w-4 h-4" />
+                        </Link>
+                        <Link href="https://twitter.com/danielbabalola" className="text-secondary-text text-sm rounded-full p-2 bg-dark-background border-[1.5px] border-dark-border hover:bg-primary-text hover:text-dark-background transition-all duration-300">
+                            <Twitter className="w-4 h-4" />
+                        </Link>
+                        <Link href="https://www.instagram.com/dannybabs/" className="text-secondary-text text-sm rounded-full p-2 bg-dark-background border-[1.5px] border-dark-border hover:bg-primary-text hover:text-dark-background transition-all duration-300">
+                            <Instagram className="w-4 h-4" />
+                        </Link>
+
+                    </div>
+                    <LastVisitorLocation />
                 </div>
             </div>
         </div>
