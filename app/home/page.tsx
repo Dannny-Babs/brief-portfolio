@@ -1,6 +1,9 @@
+"use client";
+
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import ResponsiveHeader from "@/components/ResponsiveHeader";
+import AsciiWelcome from "@/components/ascii-welcome";
 
 export default function Home() {
     const getDate = () => {
@@ -16,9 +19,11 @@ export default function Home() {
                 "aspect-2/1 select-none sm:aspect-5/1 max-w-5xl mx-auto      border-r-[1.5px] border-l-[1.5px] border-b-[1.5px]              border-dark-border",
                 "flex items-center justify-center text-black dark:text-white",
                 "screen-line-before screen-line-after before:-top-px     after:-bottom-px",
-                "bg-dots"
-            )} />
-
+                "bg-dots text-secondary-text"
+            )} >
+                 <AsciiWelcome interval={4000} />
+            </div>
+     
 
             <div className={cn(
                 "max-w-5xl border-r-[1.5px] border-l-[1.5px] border-b-[1.5px] border-dark-border mx-auto ",
@@ -98,13 +103,13 @@ export default function Home() {
                         </p>
                     </div>
                     <p className="text-primary-text text-lg leading-tight">
-                        Designed Med Melanin&apos;s mobile and web apps leading user research and testing to create a design system and clean, functional UI. Worked on a 30-plus-page, SEO-optimized website that boosted fundraising and user growth.
+                        Designed Med Melanin&apos;s mobile and web apps leading user research and testing to create a design system and clean, functional UI.
                         <br />
                         <br />
                         <span className="text-secondary-text">
                             Key Achievements:
                         </span>
-                        <ul className="list-disc list-inside pl-5 mt-1 space-y-1 text-lg leading-relaxed tracking-loose text-primary-text">
+                        <ul className="list-disc list-inside pl-5 mt-1 space-y-1 text-lg leading-tight md:leading-relaxed tracking-loose text-primary-text">
                             <li>Spearheaded full-stack design &amp; dev of a 30+ page website (blog, CMS, SEO-optimized), ranking #1 for brand and health keywords.</li>
                             <li>Integrated marketing tools like Mailchimp, Notion, and built custom automation scripts for internal workflows.</li>
                             <li>Designed and maintained the complete web app dashboard, design system, and mobile app experience for patients.</li>
@@ -138,7 +143,7 @@ export default function Home() {
                         <span className="text-secondary-text">
                             Key Achievements:
                         </span>
-                        <ul className="list-disc list-inside  text-primary-text text-lg tracking-wide pl-4 pr-4 leading-relaxed">
+                        <ul className="list-disc list-inside  text-primary-text text-lg tracking-wide pl-4 pr-4 leading-tight md:leading-relaxed">
                             <li>Built and designed landing pages and full websites for 10+ early-stage teams.</li>
                             <li>Designed dashboard for a voice AI agent platform, aligning UX with NLP user flows.</li>
                             <li>Led design of a web app &amp; pitch deck for an AI-powered accessibility compliance checker.</li>
@@ -269,14 +274,14 @@ export default function Home() {
                 </div>
             </div>
             <div className={cn(
-                "max-w-5xl border-r-[1.5px] border-l-[1.5px] border-b-[1.5px] border-dark-border mx-auto md:p-8 p-3 ",
+                "max-w-5xl border-r-[1.5px] border-l-[1.5px] border-b-[1.5px] border-dark-border mx-auto  ",
                 "flex flex-row items-center w-full justify-between"
             )}>
-                <div className="flex flex-col gap-2 text-left md:w-1/2">
+                <div className="flex flex-col text-left  p-4 md:p-8 border-r-[1.5px] border-dark-border bg-dots">
                     <h5 className="text-lg font-medium text-primary-text ">
                         I&apos;m Daniel. A pixel alchemist, problem solver, and passionate human.
                         I design, build, and learn in public. Imperfectly perfect and always evolving.
-                        
+
                         <br />
                         In my free time, I create posters and visuals just for fun.
                         <br />
@@ -287,13 +292,23 @@ export default function Home() {
                         Thanks for being here.
 
                     </h5>
-                   
-                      
+
+
                 </div>
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col h-full  p-4 md:p-8">
                     <div className="flex flex-row items-center gap-2">
-                        <Image src="/images/linkedin.png" alt="linkedin" width={24} height={24} />
+                        <Image src="/images/me.png" alt="me" width={240} height={320}  />
                     </div>
+                </div>
+            </div>
+            <div className={cn(
+                "max-w-5xl border-r-[1.5px] border-l-[1.5px] border-b-[1.5px] border-dark-border mx-auto p-4 md:p-8",
+                "flex flex-row items-center w-full justify-between"
+            )}>
+                <div className="flex flex-col gap-2">
+                    <h3 className="text-lg font-medium text-secondary-text ">
+                        SELECTED WORKS
+                    </h3>
                 </div>
             </div>
         </div>
