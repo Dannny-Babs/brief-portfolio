@@ -4,15 +4,7 @@ export default function SelectedWorks() {
     return (
         <div className="w-full max-w-5xl border-r-[1.5px] border-l-[1.5px] border-b-[1.5px] border-dark-border mx-auto grid grid-cols-1 md:grid-cols-3 ">
             <div className="flex flex-col h-full col-span-1">
-                <div className="relative w-full h-fit p-4 border-r-[1.5px] border-b-[1.5px] border-dark-border overflow-hidden">
-                    <Image src="/images/Med Melanin.png" alt="work1" height={1200} width={1000} className="object-contain" />
-                    <h4 className="text-primary-text tracking-wide text-xl font-medium leading-tight mt-4">
-                        MedMelanin Website
-                    </h4>
-                    <p className="text-secondary-text text-[17px] font-medium leading-tight mt-1">
-                        30+ page site with CMS, SEO, automations.                            </p>
-
-                </div>
+               
                 <div className="relative w-full h-fit p-4 border-r-[1.5px] border-b-[1.5px] border-dark-border overflow-hidden">
                     <Image src="/images/Inclusivio.png" alt="work1" height={1200} width={1000} className="object-contain" />
                     <h4 className="text-primary-text tracking-wide text-xl font-medium leading-tight mt-4">
@@ -58,16 +50,7 @@ export default function SelectedWorks() {
 
                 </div>
 
-                <div className="relative w-full h-fit p-4 border-r-[1.5px]  border-dark-border overflow-hidden">
-                    <Image src="/images/Juniper.png" alt="work1" height={1200} width={1000} className="object-contain" />
-                    <h4 className="text-primary-text tracking-wide text-xl font-medium leading-tight mt-4">
-                        Spectraum
-                    </h4>
-                        <p className="text-secondary-text text-[17px] font-medium leading-tight">
-                        E-commerce app for neurodivergent users
-                    </p>
-
-                </div>
+                
 
             </div>
             <div className="flex flex-col h-full col-span-1">
