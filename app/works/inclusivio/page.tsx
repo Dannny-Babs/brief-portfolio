@@ -52,7 +52,7 @@ export default function Inclusivio() {
                     Role
                 </p>
                 <p className="text-primary-text text-lg font-medium leading-tight">
-                    Product Designer, Developer
+                    Visual Branding & Product Designer
                 </p>
             </div>
             <div className="flex flex-col gap-1 items-start justify-start ">

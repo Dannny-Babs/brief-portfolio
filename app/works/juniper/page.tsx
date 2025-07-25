@@ -110,6 +110,10 @@ export default function JuniperDetails() {
                 <Image src="/images/juniper/Juniper-04.png" alt="Juniper" width={1000} height={1000} className="my-4" />
                 <Image src="/images/juniper/Juniper-05.png" alt="Juniper" width={1000} height={1000} className="my-4" />
                 <Image src="/images/juniper/Juniper-06.png" alt="Juniper" width={1000} height={1000} className="my-4" />
+                <Image src="/images/juniper/Juniper-07.png" alt="Juniper" width={1000} height={1000} className="my-4" />
+                <Image src="/images/juniper/Juniper-08.png" alt="Juniper" width={1000} height={1000} className="my-4" />
+                <Image src="/images/juniper/Juniper-09.png" alt="Juniper" width={1000} height={1000} className="my-4" />
+             
             </div>
             <div className={cn(
                 "max-w-5xl border-r-[1.5px] border-l-[1.5px] border-b-[1.5px] border-dark-border mx-auto ",
