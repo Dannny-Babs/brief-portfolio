@@ -63,7 +63,7 @@ export default function JuniperDetails() {
                     </p>
                     <div className="flex flex-row gap-2 items-center justify-start ">
                         <p className="text-primary-text text-lg hover:underline font-medium leading-tight">
-                            <Link href="https://thea11ylabs.com/" target="_blank">Website</Link>
+                            <Link href="https://github.com/Dannny-Bab/juniper" target="_blank">Github</Link>
                         </p>
                     </div>
 
@@ -73,7 +73,7 @@ export default function JuniperDetails() {
                         Tools
                     </p>
                     <p className="text-primary-text text-lg font-medium leading-tight">
-                        Figma, UX Research, Competitive Analysis
+                        Figma, Flutter, Dart, BLoC, Clean Architecture, SQLite
                     </p>
                 </div>
 
