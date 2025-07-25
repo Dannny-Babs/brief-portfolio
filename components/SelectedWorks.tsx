@@ -16,7 +16,7 @@ export default function SelectedWorks() {
 
 
                 </div>
-                <div className="relative w-full h-fit p-4 border-r-[1.5px]  border-dark-border overflow-hidden">
+                <div className="relative w-full h-fit p-4  border-dark-border overflow-hidden">
                     <Image src="/images/Talo.gif" alt="work1" height={1200} width={1000} className="object-contain" />
                     <h4 className="text-primary-text tracking-wide text-xl font-medium leading-tight mt-4">
                         Talo
@@ -39,7 +39,22 @@ export default function SelectedWorks() {
                     </p>
 
                 </div>
-                <div className="relative w-full h-fit p-4 border-r-[1.5px] border-b-[1.5px] border-dark-border overflow-hidden">
+                <div className="relative w-full h-fit p-4 border-r-[1.5px] border-l-[1.5px] border-dark-border overflow-hidden">
+                    <Image src="/images/juniper/Juniper.png" alt="work1" height={1400} width={1000} className="object-contain" />
+                    <h4 className="text-primary-text tracking-wide text-xl font-medium leading-tight mt-4">
+                        Juniper
+                    </h4>
+                    <p className="text-secondary-text text-[17px] font-medium leading-tight mt-1">
+                        Smart apartment search with onboarding & investment tools
+                    </p>
+
+                </div>
+                
+                
+
+            </div>
+            <div className="flex flex-col h-full col-span-1">
+            <div className="relative w-full h-fit p-4 border-r-[1.5px] border-b-[1.5px] border-dark-border overflow-hidden">
                     <Image src="/images/MedMelanin.png" alt="work1" height={1200} width={1000} className="object-contain" />
                     <h4 className="text-primary-text tracking-wide text-xl font-medium leading-tight mt-4">
                         MedMelanin App
@@ -50,22 +65,7 @@ export default function SelectedWorks() {
 
                 </div>
 
-                
-
-            </div>
-            <div className="flex flex-col h-full col-span-1">
-                <div className="relative w-full h-fit p-4 border-r-[1.5px] border-b-[1.5px] border-dark-border overflow-hidden">
-                    <Image src="/images/Marathon.png" alt="work3" height={1200} width={1000} className="object-contain" />
-                    <h4 className="text-primary-text tracking-wide text-xl font-medium leading-tight mt-4">
-                        Marathon
-                    </h4>
-                    <p className="text-secondary-text text-[17px] font-medium leading-tight mt-1">
-                        AI Sales Enablement Platform
-                    </p>
-
-
-                </div>
-                <div className="relative w-full h-fit p-4 border-r-[1.5px] border-b-[1.5px] border-dark-border overflow-hidden">
+                <div className="relative w-full h-fit p-4 border-r-[1.5px] border-dark-border overflow-hidden">
                     <Image src="/images/Tally.png" alt="work1" height={1200} width={1000} className="object-contain" />
                     <h4 className="text-primary-text tracking-wide text-xl font-medium leading-tight mt-4">
                         Tally
@@ -75,16 +75,7 @@ export default function SelectedWorks() {
                     </p>
 
                 </div>
-                <div className="relative w-full h-fit p-4 border-r-[1.5px] border-b-[1.5px] border-dark-border overflow-hidden">
-                    <Image src="/images/Juniper.png" alt="work1" height={1200} width={1000} className="object-contain" />
-                    <h4 className="text-primary-text tracking-wide text-xl font-medium leading-tight mt-4">
-                        Juniper
-                    </h4>
-                    <p className="text-secondary-text text-[17px] font-medium leading-tight mt-1">
-                        Smart apartment search with onboarding & investment tools
-                    </p>
-
-                </div>
+               
             </div>
         </div>
     );
