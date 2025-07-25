@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function SorteeDetails() {
     return (
-        <div className="min-h-screen px-6 bg-dark-background font-[family-name:var(--font-darker-grotesque)]">
+        <div className="min-h-screen  font-[family-name:var(--font-darker-grotesque)]">
             <ResponsiveHeader />
             <div className={cn(
                 "max-w-5xl border-r-[1.5px] border-l-[1.5px] border-b-[1.5px] border-dark-border mx-auto ",

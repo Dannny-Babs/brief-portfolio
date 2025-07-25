@@ -1,4 +1,4 @@
-import ResponsiveHeader from "@/components/ResponsiveHeader";
+"use client"
 import { cn } from "@/lib/utils";
 import { UndoLeftRound } from '@solar-icons/react/ssr';
 import Link from "next/link";
@@ -6,8 +6,8 @@ import Image from "next/image";
 
 export default function TallyDetails() {
     return (
-        <div className="min-h-screen px-6 bg-dark-background font-[family-name:var(--font-darker-grotesque)]">
-            <ResponsiveHeader />
+        <div className="min-h-screen  font-[family-name:var(--font-darker-grotesque)]">
+           
             <div className={cn(
                 "max-w-5xl border-r-[1.5px] border-l-[1.5px] border-b-[1.5px] border-dark-border mx-auto ",
                 "flex md:flex-row flex-col items-start w-full"
@@ -170,7 +170,7 @@ export default function TallyDetails() {
 
                     <br />
                     <br />
-                    
+
                     The roadmap is in place, and I know how I&apos;d return to it when the timing and tools align. Whether I continue in Flutter or rebuild it in React Native or native Swift, Tally is the kind of project that sharpened how I design, plan, and ship products that matter.
 
 
