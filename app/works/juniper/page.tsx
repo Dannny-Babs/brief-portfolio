@@ -133,66 +133,56 @@ export default function JuniperDetails() {
                     File Structure:
                 </p>
 
-                <ul className="text-primary-text text-lg font-medium leading-tight ">
-                    <li>
+                <ul className="filetree-ul text-primary-text text-lg font-medium leading-tight">
+                    <li className="filetree-li">
                         lib/
-                        <ul className="  pl-4 text-primary-text">
-                            <li>core/ <span className="text-secondary-text" ># Constants, themes, shared components</span></li>
-                            <li>
+                        <ul className="filetree-ul pl-4 text-primary-text">
+                            <li className="filetree-li">core/ <span className="text-secondary-text"># Constants, themes, shared components</span></li>
+                            <li className="filetree-li">
                                 features/
-                                <ul className=" pl-4 text-primary-text">
-                                    <li>
+                                <ul className="filetree-ul pl-4 text-primary-text">
+                                    <li className="filetree-li">
                                         home/
-                                        <ul className="pl-4">
-                                            <li>
+                                        <ul className="filetree-ul pl-4">
+                                            <li className="filetree-li">
                                                 data/
-                                                <ul className="pl-4">
-                                                    <li>datasources/</li>
-                                                    <li>models/</li>
-                                                    <li>repositories/</li>
-                                                    <li>
-                                                        <span className="text-secondary-text">datasource.dart</span>
-                                                    </li>
+                                                <ul className="filetree-ul pl-4">
+                                                    <li className="filetree-li">datasources/</li>
+                                                    <li className="filetree-li">models/</li>
+                                                    <li className="filetree-li">repositories/</li>
+                                                    <li className="filetree-li"><span className="text-secondary-text">datasource.dart</span></li>
                                                 </ul>
                                             </li>
-                                            <li>
+                                            <li className="filetree-li">
                                                 domain/
-                                                <ul className="pl-4">
-                                                    <li>entities/</li>
-                                                    <li>repositories/</li>
-                                                    <li>usecases/</li>
-                                                    <li>
-                                                        <span className="text-secondary-text">entities.dart</span>
-                                                    </li>
+                                                <ul className="filetree-ul pl-4">
+                                                    <li className="filetree-li">entities/</li>
+                                                    <li className="filetree-li">repositories/</li>
+                                                    <li className="filetree-li">usecases/</li>
+                                                    <li className="filetree-li"><span className="text-secondary-text">entities.dart</span></li>
                                                 </ul>
                                             </li>
-                                            <li>
+                                            <li className="filetree-li">
                                                 presentation/
-                                                <ul className="pl-4">
-                                                    <li>blocs/</li>
-                                                    <li>pages/</li>
-                                                    <li>widgets/</li>
-                                                    <li>
-                                                        <span className="text-secondary-text">home_page.dart</span>
-                                                    </li>
+                                                <ul className="filetree-ul pl-4">
+                                                    <li className="filetree-li">blocs/</li>
+                                                    <li className="filetree-li">pages/</li>
+                                                    <li className="filetree-li">widgets/</li>
+                                                    <li className="filetree-li"><span className="text-secondary-text">home_page.dart</span></li>
                                                 </ul>
                                             </li>
-                                            <li>
-                                                <span className="text-secondary-text">index.dart</span>
-                                            </li>
-                                            <li>
-                                                <span className="text-secondary-text">types.dart</span>
-                                            </li>
+                                            <li className="filetree-li"><span className="text-secondary-text">index.dart</span></li>
+                                            <li className="filetree-li"><span className="text-secondary-text">types.dart</span></li>
                                         </ul>
                                     </li>
 
-                                    <li>onboarding/ <span className="text-secondary-text" ># Welcome flow</span></li>
-                                    <li>search/ <span className="text-secondary-text" ># Apartment discovery</span></li>
-                                    <li>favorites/ <span className="text-secondary-text" ># Saved listings</span></li>
-                                    <li>investment/ <span className="text-secondary-text" ># Portfolio tracking (future)</span></li>
+                                    <li className="filetree-li">onboarding/ <span className="text-secondary-text"># Welcome flow</span></li>
+                                    <li className="filetree-li">search/ <span className="text-secondary-text"># Apartment discovery</span></li>
+                                    <li className="filetree-li">favorites/ <span className="text-secondary-text"># Saved listings</span></li>
+                                    <li className="filetree-li">investment/ <span className="text-secondary-text"># Portfolio tracking (future)</span></li>
                                 </ul>
                             </li>
-                            <li>presentation/ <span className="text-secondary-text" ># Reusable widgets and screens</span></li>
+                            <li className="filetree-li">presentation/ <span className="text-secondary-text"># Reusable widgets and screens</span></li>
                         </ul>
                     </li>
                 </ul>

@@ -138,6 +138,41 @@ body {
   }
 }
 
+.filetree-ul {
+  position: relative;
+  padding-left: 0.5rem;
+}
+.filetree-li {
+  position: relative;
+  padding-left: 1rem;
+}
+.filetree-li:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: 0.1rem;
+  top: 0.1rem;
+  bottom: 0;
+  width: 0;
+  border-left: 1.5px solid var(--color-dark-border);
+}
+.filetree-li::after {
+  content: "";
+  position: absolute;
+  left: 0.1rem;
+  top: 1em;
+  width: 1rem;
+  height: 0;
+  border-top: 1.5px solid var(--color-dark-border);
+}
+
+.filetree-li:last-child::before {
+  height: 1em;
+  bottom: auto;
+}
+.filetree-li:last-child::after {
+  display: none;
+}
+
 @layer utilities {
   .bg-dots {
     background-image: radial-gradient(var(--pattern) 1px, transparent 0);
