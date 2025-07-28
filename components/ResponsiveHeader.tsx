@@ -16,12 +16,12 @@ export default function ResponsiveHeader() {
             </div>
             {/* Socials and Nav Toggle (Desktop) */}
             <div className="hidden md:flex items-center gap-4">
-                <Link href="/">
+                <Link href="https://github.com/Dannny-Babs">
                     <div className="flex items-center justify-center p-2 rounded-full border-[1.5px] border-dark-border">
                         <GithubIcon className="w-4 h-4 text-nav-link" />
                     </div>
                 </Link>
-                <Link href="/">
+                <Link href="https://x.com/kng_lax">
                     <div className="flex items-center justify-center p-2 rounded-full border-[1.5px] border-dark-border">
                         <TwitterIcon className="w-4 h-4 text-nav-link" />
                     </div>
@@ -40,12 +40,12 @@ export default function ResponsiveHeader() {
                             <Link href="/" className="text-nav-link text-lg font-semibold">Blog</Link>
                             <Link href="/" className="text-nav-link text-lg font-semibold">Gallery</Link>
                             <div className="flex gap-4 mt-4">
-                                <Link href="/">
+                                <Link href="https://github.com/Dannny-Babs">
                                     <div className="flex items-center justify-center p-2 rounded-full border-[1.5px] border-dark-border">
                                         <GithubIcon className="w-5 h-5 text-nav-link" />
                                     </div>
                                 </Link>
-                                <Link href="/">
+                                <Link href="https://x.com/kng_lax">
                                     <div className="flex items-center justify-center p-2 rounded-full border-[1.5px] border-dark-border">
                                         <TwitterIcon className="w-5 h-5 text-nav-link" />
                                     </div>
@@ -70,12 +70,12 @@ export default function ResponsiveHeader() {
                             <Link href="/" className="text-nav-link text-lg font-semibold">Blog</Link>
                             <Link href="/" className="text-nav-link text-lg font-semibold">Gallery</Link>
                             <div className="flex gap-4 mt-4">
-                                <Link href="/">
+                                <Link href="https://github.com/Dannny-Babs">
                                     <div className="flex items-center justify-center p-2 rounded-full border-[1.5px] border-dark-border">
                                         <GithubIcon className="w-5 h-5 text-nav-link" />
                                     </div>
                                 </Link>
-                                <Link href="/">
+                                <Link href="https://x.com/kng_lax">
                                     <div className="flex items-center justify-center p-2 rounded-full border-[1.5px] border-dark-border">
                                         <TwitterIcon className="w-5 h-5 text-nav-link" />
                                     </div>
