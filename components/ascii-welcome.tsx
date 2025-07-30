@@ -60,7 +60,7 @@ export default function AsciiWelcome({ interval = 4000 }: { interval?: number })
     return (
         <pre
             aria-label="ASCII welcome"
-            className="font-darker-grotesque whitespace-pre leading-none text-xs sm:text-sm"
+            className=" whitespace-pre leading-none text-xs sm:text-sm  font-mono"
         >
             {ascii}
         </pre>

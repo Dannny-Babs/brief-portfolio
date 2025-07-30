@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { UndoLeftRound } from "@solar-icons/react/ssr";
+import Image from "next/image";
 
 
 export default function Talo() {
@@ -76,6 +77,40 @@ export default function Talo() {
                     </p>
                 </div>
             </div>
+            <div className={cn(
+                "max-w-5xl border-r-[1.5px] border-l-[1.5px] border-b-[1.5px] border-dark-border mx-auto ",
+                "flex  flex-col  w-full gap-8",
+                "p-4"
+            )}>
+                <Image src="/images/talo.gif" alt="Talo" height={1200} width={1000} className="object-contain" />
+                <p className="text-primary-text text-lg font-medium leading-tight">
+                    Talo was my first real startup idea — born from frustration with the job hunt and built to help others like me navigate it better. I wanted to solve a problem I personally experienced: fragmented job boards, zero feedback, bad UX, and poor job descriptions. So I built what I wished existed.
+                </p>
+            </div>
+            <div className={cn(
+                "max-w-5xl border-r-[1.5px] border-l-[1.5px] border-b-[1.5px] border-dark-border mx-auto ",
+                "flex  flex-col  w-full gap-8",
+                "p-4"
+            )}>
+                <Image src="/images/talo/talo-01.png" alt="Talo" height={1200} width={1000} className="object-contain" />
+                <Image src="/images/talo/talo-02.png" alt="Talo" height={1200} width={1000} className="object-contain" />
+            </div>
+            <div className={cn(
+                "max-w-5xl border-r-[1.5px] border-l-[1.5px] border-b-[1.5px] border-dark-border mx-auto ",
+                "flex  flex-col  w-full gap-8",
+                "p-4"
+            )}>
+                <Image src="/images/talo/Dashboard 01.png" alt="Talo" height={1200} width={1000} className="object-contain" />
+                <Image src="/images/talo/Dashboard 02.png" alt="Talo" height={1200} width={1000} className="object-contain" />
+                <Image src="/images/talo/Dashboard 03.png" alt="Talo" height={1200} width={1000} className="object-contain" />
+                <Image src="/images/talo/Dashboard 04.png" alt="Talo" height={1200} width={1000} className="object-contain" />
+                <Image src="/images/talo/Dashboard 05.png" alt="Talo" height={1200} width={1000} className="object-contain" />
+                <Image src="/images/talo/Dashboard 06.png" alt="Talo" height={1200} width={1000} className="object-contain" />
+                <Image src="/images/talo/Dashboard 07.png" alt="Talo" height={1200} width={1000} className="object-contain" />
+            </div>
+
+
+
         </div>
     )
 }
