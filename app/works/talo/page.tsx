@@ -108,6 +108,65 @@ export default function Talo() {
                 <Image src="/images/talo/Dashboard 06.png" alt="Talo" height={1200} width={1000} className="object-contain" />
                 <Image src="/images/talo/Dashboard 07.png" alt="Talo" height={1200} width={1000} className="object-contain" />
             </div>
+            <div className={cn(
+                "max-w-5xl border-r-[1.5px] border-l-[1.5px] border-b-[1.5px] border-dark-border mx-auto ",
+                "flex  flex-col  w-full gap-8",
+                "p-4"
+            )}>
+                <div className="flex flex-col gap-1 items-start justify-start">
+                    <p className="text-primary-text text-lg font-medium leading-tight">
+                        The dashboard is the core of the app, it&apos;s where users can manage their jobs and applications.
+                    </p>
+                </div>
+            </div>
+            <div className={cn(
+                "max-w-5xl border-r-[1.5px] border-l-[1.5px] border-b-[1.5px] border-dark-border mx-auto ",
+                "flex  flex-col  w-full gap-8",
+                "p-4"
+            )}>
+                <Image src="/images/talo/Mobile 01.png" alt="Talo" height={1200} width={1000} className="object-contain" />
+                <Image src="/images/talo/Mobile 02.png" alt="Talo" height={1200} width={1000} className="object-contain" />
+            </div>
+            <div className={cn(
+                "max-w-5xl border-r-[1.5px] border-l-[1.5px] border-b-[1.5px] border-dark-border mx-auto ",
+                "flex  flex-col  w-full gap-8",
+                "p-4"
+            )}>
+
+                <h3 className="text-primary-text text-lg font-semibold leading-tight">Extension Mockups</h3>
+            </div>
+            <div className={cn(
+                "max-w-5xl border-r-[1.5px] border-l-[1.5px] border-b-[1.5px] border-dark-border mx-auto ",
+                "flex  flex-col  w-full gap-8",
+                "p-4"
+            )}>
+                <Image src="/images/talo/Extension 01.png" alt="Talo" height={1200} width={1000} className="object-contain" />
+                <Image src="/images/talo/Extension 02.png" alt="Talo" height={1200} width={1000} className="object-contain" />
+            </div>
+            <div className={cn(
+                "max-w-5xl border-r-[1.5px] border-l-[1.5px] border-b-[1.5px] border-dark-border mx-auto ",
+                "flex  flex-col  w-full gap-8",
+                "p-4"
+            )}>
+                <h3 className="text-primary-text text-lg font-semibold leading-tight">
+                    System Architecture
+                </h3>
+                <p className="text-primary-text text-lg font-medium leading-tight">
+                    Talo is built with Next.js, Tailwind CSS, Shadcn UI, and Supabase.
+                </p>
+
+
+            </div>
+            <div className={cn(
+                "max-w-5xl border-r-[1.5px] border-l-[1.5px] border-b-[1.5px] border-dark-border mx-auto ",
+                "flex  flex-col  w-full gap-8",
+                "p-4"
+            )}>
+                <Image src="/images/talo/Archi01.png" alt="Talo" height={1200} width={1000} className="object-contain" />
+                <Image src="/images/talo/Archi02.png" alt="Talo" height={1200} width={1000} className="object-contain" />
+                <Image src="/images/talo/Archi03.png" alt="Talo" height={1200} width={1000} className="object-contain" />
+               
+            </div>
 
 
 
