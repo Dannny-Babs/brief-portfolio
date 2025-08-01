@@ -40,19 +40,16 @@ export default function WorksLayout({ children }: { children: React.ReactNode })
             )}>
                 <div className="flex md:flex-row flex-col gap-2 w-full justify-between items-center  ">
                     <div className="flex flex-row items-center gap-2">
-                        <Link href="https://www.linkedin.com/in/danny-babs/" className="text-secondary-text text-sm  p-2 bg-dark-background hover:text-primary-text  transition-all duration-300">
+                        <Link href="https://www.linkedin.com/in/dannybabs/" className="text-secondary-text text-sm  p-2 bg-dark-background hover:text-primary-text  transition-all duration-300">
                             LinkedIn
                         </Link>
-                        <Link href="https://github.com/danielbabalola" className="text-secondary-text text-sm  p-2 bg-dark-background hover:text-primary-text  transition-all duration-300">
+                        <Link href="https://github.com/Dannny-Babs" className="text-secondary-text text-sm  p-2 bg-dark-background hover:text-primary-text  transition-all duration-300">
                             Github
                         </Link>
-                        <Link href="https://twitter.com/danielbabalola" className="text-secondary-text text-sm  p-2 bg-dark-background hover:text-primary-text  transition-all duration-300">
+                        <Link href="https://x.com/kng_lax" className="text-secondary-text text-sm  p-2 bg-dark-background hover:text-primary-text  transition-all duration-300">
                             Twitter
                         </Link>
-                        <Link href="https://www.instagram.com/dannybabs/" className="text-secondary-text text-sm  p-2 bg-dark-background hover:text-primary-text  transition-all duration-300">
-                            Instagram
-                        </Link>
-
+                        
                     </div>
                     <LastVisitorLocation />
                 </div>
