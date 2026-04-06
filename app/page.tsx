@@ -62,22 +62,32 @@ export default function Home() {
             )}>
                 <div className="flex md:flex-row flex-col md:items-center w-full">
                     <div className="md:flex flex-col  md:justify-center md:items-center items-start   border-r-[1.5px] border-dark-border md:border-none h-auto p-4 w-1/2 md:w-auto ">
-                        <Image src="/images/profile.png" alt="profile" width={150} height={150} className="rounded-full" />
+                        <Image
+                            src="/images/profile.png"
+                            alt="Daniel Babalola"
+                            width={150}
+                            height={150}
+                            className="rounded-full ring-1 ring-dark-border/80 ring-offset-2 ring-offset-dark-background"
+                        />
                     </div>
                     <div className="flex flex-col flex-1 border-t-[1.5px] md:border-t-0 md:border-l-[1.5px] border-dark-border">
-                        <div className="flex flex-col p-4 border-b-[1.5px] border-dark-border">
-                            <h1 className="text-4xl font-semibold text-primary-text leading-tight tracking-tight">
+                        <div className="flex flex-col p-4 md:p-6 border-b-[1.5px] border-dark-border">
+                            <p className="text-xs font-medium uppercase tracking-[0.18em] text-secondary-text mb-3">
+                                Portfolio
+                            </p>
+                            <h1 className="text-4xl md:text-5xl font-semibold text-primary-text leading-[1.05] tracking-[-0.03em]">
                                 Daniel Babalola
                             </h1>
-                            <p className="text-nav-link opacity-80 text-lg leading-tight">
-                                Design Engineer
+                            <p className="text-nav-link opacity-90 text-base md:text-lg leading-tight mt-2 font-medium tracking-wide">
+                                Software engineer · Toronto
                             </p>
                         </div>
-                        <div className="flex flex-col p-4">
-                            <p className="text-primary-text text-lg leading-tight tracking-wide font-medium ">
-                                I&apos;m a design engineer based in Toronto, building products that are both functional and beautiful.
-                                Currently, I&apos;m working at Med Melanin as a design engineer, creating user-centered solutions for healthcare.
-                                Over the past 3+ years, I&apos;ve built and shipped multiple high-impact projects across healthcare, accessibility, voice AI, and consumer apps—both as an in-house contributor and as a freelance partner to early-stage startups.
+                        <div className="flex flex-col gap-2 p-3 md:p-4">
+                            <p className="text-primary-text text-lg leading-snug font-medium">
+                                I&apos;m a software engineer in Toronto with a strong design and product streak—I like building things that are clear to use and solid under the hood. Right now I&apos;m at Rose Rocket as a forward-deployed engineer: I work with customers and ship production features for logistics teams end to end.
+                            </p>
+                            <p className="text-primary-text text-lg leading-snug font-medium">
+                                Before that I wore a design-engineer hat at places like Med Melanin (healthcare), and over the years I&apos;ve shipped work across accessibility, voice AI, and consumer apps—as staff, as a freelancer, and with early-stage teams. I care about good UX, honest copy, and code that holds up when it meets real users.
                             </p>
                         </div>
                     </div>
@@ -111,9 +121,9 @@ export default function Home() {
                 "max-w-5xl border-r-[1.5px] border-l-[1.5px] border-b-[1.5px] border-dark-border mx-auto px-3 py-3",
                 "flex flex-row items-center w-full justify-between"
             )}>
-                <div className="flex flex-col gap-2">
-                    <h3 className="text-lg font-medium text-secondary-text ">
-                        SELECTED WORKS
+                <div className="flex flex-col gap-2 px-1">
+                    <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-secondary-text">
+                        Selected works
                     </h3>
                 </div>
             </div>
@@ -123,20 +133,12 @@ export default function Home() {
                 "flex md:flex-row flex-col items-center w-full justify-between"
             )}>
                 <div className="flex flex-col text-left  p-4 md:p-8  border-dark-border">
-                    <h5 className="text-lg font-medium text-primary-text ">
-                        I&apos;m Daniel. A pixel alchemist, problem solver, and passionate human.
-                        I design, build, and learn in public. Imperfectly perfect and always evolving.
-
-                        <br />
-                        In my free time, I create posters and visuals just for fun.
+                    <p className="text-xl font-medium text-primary-text leading-relaxed max-w-prose">
+                        I design and build in public—posters on the side, serious product work the rest of the time.
                         <br />
                         <br />
-                        Beyond the screen, I&apos;m chasing bold ideas and building things that matter.
-                        <br />
-                        <br />
-                        Thanks for being here.
-
-                    </h5>
+                        Glad you stopped by.
+                    </p>
 
 
                 </div>
@@ -156,7 +158,12 @@ export default function Home() {
 
                         <br />
                         <span className="text-primary-text">
-                            <a href="mailto:dbabs297@gmail.com" className="text-primary-text underline">Get in touch</a>
+                            <a
+                                href="mailto:dbabs297@gmail.com"
+                                className="text-primary-text underline underline-offset-4 decoration-2 font-medium"
+                            >
+                                Get in touch
+                            </a>
 
                         </span>
                     </h3>
@@ -168,16 +175,16 @@ export default function Home() {
             )}>
                 <div className="flex md:flex-row flex-col gap-2 w-full justify-between items-center  ">
                     <div className="flex flex-row items-center gap-2">
-                        <Link href="https://www.linkedin.com/in/danny-babs/" className="text-secondary-text text-sm rounded-full p-2 bg-dark-background border-[1.5px] border-dark-border hover:bg-primary-text hover:text-dark-background transition-all duration-300">
+                        <Link href="https://www.linkedin.com/in/danny-babs/" className="text-secondary-text text-sm rounded-full p-2 bg-dark-background border-[1.5px] border-dark-border hover:bg-primary-text hover:text-dark-background transition-colors duration-200 ease-out focus-visible:outline-offset-4">
                             <Linkedin className="w-4 h-4" />
                         </Link>
-                        <Link href="https://github.com/danielbabalola" className="text-secondary-text text-sm rounded-full p-2 bg-dark-background border-[1.5px] border-dark-border hover:bg-primary-text hover:text-dark-background transition-all duration-300">
+                        <Link href="https://github.com/danielbabalola" className="text-secondary-text text-sm rounded-full p-2 bg-dark-background border-[1.5px] border-dark-border hover:bg-primary-text hover:text-dark-background transition-colors duration-200 ease-out focus-visible:outline-offset-4">
                             <Github className="w-4 h-4" />
                         </Link>
-                        <Link href="https://twitter.com/danielbabalola" className="text-secondary-text text-sm rounded-full p-2 bg-dark-background border-[1.5px] border-dark-border hover:bg-primary-text hover:text-dark-background transition-all duration-300">
+                        <Link href="https://twitter.com/danielbabalola" className="text-secondary-text text-sm rounded-full p-2 bg-dark-background border-[1.5px] border-dark-border hover:bg-primary-text hover:text-dark-background transition-colors duration-200 ease-out focus-visible:outline-offset-4">
                             <Twitter className="w-4 h-4" />
                         </Link>
-                        <Link href="https://www.instagram.com/dannybabs/" className="text-secondary-text text-sm rounded-full p-2 bg-dark-background border-[1.5px] border-dark-border hover:bg-primary-text hover:text-dark-background transition-all duration-300">
+                        <Link href="https://www.instagram.com/dannybabs/" className="text-secondary-text text-sm rounded-full p-2 bg-dark-background border-[1.5px] border-dark-border hover:bg-primary-text hover:text-dark-background transition-colors duration-200 ease-out focus-visible:outline-offset-4">
                             <Instagram className="w-4 h-4" />
                         </Link>
 

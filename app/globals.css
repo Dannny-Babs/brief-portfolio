@@ -1,6 +1,9 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* Scan sibling dammydev-ui so Tailwind generates classes used by embedded components */
+/* @source removed: components are vendored into this repo for stability */
+
 @custom-variant dark (&:is(.dark *));
 
 body {
@@ -136,6 +139,20 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+  /* WCAG 2.2 — visible focus (2.4.13); matches site border tone */
+  a:focus-visible,
+  button:focus-visible,
+  [role="button"]:focus-visible {
+    outline: 2px solid var(--primary-text);
+    outline-offset: 3px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    a:focus-visible,
+    button:focus-visible,
+    [role="button"]:focus-visible {
+      outline-offset: 2px;
+    }
+  }
 }
 
 .filetree-ul {
@@ -179,6 +196,28 @@ body {
     background-size: 10px 10px;
     background-position: 0 0;
     opacity: 1;
+  }
+
+  /* Portfolio cards: Godly/Awwwards-style image lift — fine pointers only, no transform when reduced motion */
+  .portfolio-card-media {
+    will-change: transform;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .portfolio-card-hover:is(:hover, :focus-within) .portfolio-card-media {
+    transform: scale(1.03);
+  }
+}
+
+.portfolio-card-hover .portfolio-card-media {
+  transition: transform 0.35s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-card-hover .portfolio-card-media {
+    transition: none;
+    transform: none !important;
   }
 }
 

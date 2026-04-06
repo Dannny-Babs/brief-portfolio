@@ -12,10 +12,10 @@ export default function Home() {
 
         {/* Main Bio */}
         <p className="text-base md:text-sm text-gray-600 leading-relaxed">
-          I&apos;m a design engineer based in <span className="font-semibold">Toronto</span>, building products that are both functional and beautiful.
+          I&apos;m a software engineer based in <span className="font-semibold">Toronto</span>, with a background in design and product.
           
           <br />
-          Currently, I&apos;m working at <span className="font-semibold">Med Melanin</span> as a design engineer, creating user-centered solutions for healthcare.
+          Currently at <span className="font-semibold">Rose Rocket</span> as a forward-deployed engineer, shipping customer-facing features in production for logistics teams.
         </p>
 
         {/* Experience Section */}
@@ -23,6 +23,21 @@ export default function Home() {
           <h2 className="text-lg font-medium text-black">Experience</h2>
 
           <div className="space-y-6">
+            {/* Rose Rocket */}
+            <div>
+              <div className="flex items-baseline gap-2 mb-2">
+                <span className=" text-gray-800 font-semibold">Rose Rocket</span>
+              </div>
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-sm text-neutral-500 font-semibold">Software Engineer</span>
+                <div className="h-1 w-1 bg-neutral-500 tracking-tighter rounded-full"></div>
+                <span className="text-xs text-neutral-500">Oct 2025 to Present</span>
+              </div>
+              <p className="text-sm text-neutral-500 leading-relaxed">
+                Forward-deployed engineer on a transportation management system: customer-facing features, integrations (e.g. HubSpot, Mailgun), bulk document workflows, and production support.
+              </p>
+            </div>
+
             {/* Med Melanin */}
             <div>
               <div className="flex items-baseline gap-2 mb-2">
@@ -31,11 +46,11 @@ export default function Home() {
               <div className="flex items-center gap-2 mb-2">
                 <span className="text-sm text-neutral-500 font-semibold">Design Engineer</span>
                 <div className="h-1 w-1 bg-neutral-500 tracking-tighter rounded-full"></div>
-                <span className="text-xs text-neutral-500">2024 to Present</span>
+                <span className="text-xs text-neutral-500">May 2024 to Sep 2025</span>
               </div>
               <p className="text-sm text-neutral-500 leading-relaxed">
-                Designed Med Melanin&apos;s mobile and web apps  leading user research and testing to create a design system and clean, functional UI.
-                Worked on  a 30-plus-page, SEO-optimized website that boosted fundraising and user growth.
+                Led design and development for Med Melanin&apos;s mobile and web apps, including user research, a design system, and a clean UI for patients.
+                Shipped a 30-plus-page, SEO-optimized website that boosted fundraising and user growth.
               </p>
             </div>
 

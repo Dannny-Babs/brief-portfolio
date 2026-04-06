@@ -82,7 +82,14 @@ export default function Talo() {
                 "flex  flex-col  w-full gap-8",
                 "p-4"
             )}>
-                <Image src="/images/talo.gif" alt="Talo" height={1200} width={1000} className="object-contain" />
+                <Image
+                    src="/images/talo.gif"
+                    alt="Talo"
+                    height={1200}
+                    width={1000}
+                    className="object-contain"
+                    unoptimized
+                />
                 <p className="text-primary-text text-lg font-medium leading-tight">
                     Talo was my first real startup idea — born from frustration with the job hunt and built to help others like me navigate it better. I wanted to solve a problem I personally experienced: fragmented job boards, zero feedback, bad UX, and poor job descriptions. So I built what I wished existed.
                 </p>

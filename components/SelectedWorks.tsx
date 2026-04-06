@@ -1,158 +1,132 @@
 import Image from "next/image";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
+
+type WorkCardProps = {
+    href: string;
+    src: string;
+    alt: string;
+    title: string;
+    description: string;
+    cellClassName?: string;
+};
+
+function WorkCard({
+    href,
+    src,
+    alt,
+    title,
+    description,
+    cellClassName,
+}: WorkCardProps) {
+    return (
+        <article
+            className={cn(
+                "portfolio-card-hover relative w-full border-dark-border p-4",
+                cellClassName
+            )}
+        >
+            <Link
+                href={href}
+                className="group block rounded-sm outline-none transition-opacity duration-200 ease-out focus-visible:ring-2 focus-visible:ring-primary-text focus-visible:ring-offset-2 focus-visible:ring-offset-dark-background"
+            >
+                <div className="relative w-full aspect-[4/3] overflow-hidden rounded-sm bg-dark-border/15">
+                    <Image
+                        src={src}
+                        alt={alt}
+                        fill
+                        unoptimized={src.toLowerCase().endsWith(".gif")}
+                        className="portfolio-card-media object-cover"
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                    <div
+                        className="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-200 ease-out group-hover:bg-black/55 group-focus-visible:bg-black/55"
+                        aria-hidden
+                    />
+                    <span className="pointer-events-none absolute inset-0 flex items-center justify-center">
+                        <span className="rounded-full border border-white px-3 py-1 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-200 ease-out group-hover:opacity-100 group-focus-visible:opacity-100">
+                            View details
+                        </span>
+                    </span>
+                </div>
+                <h4 className="mt-4 text-balance text-xl font-medium leading-tight tracking-wide text-primary-text">
+                    {title}
+                </h4>
+                <p className="mt-1 text-pretty text-[17px] font-medium leading-tight text-secondary-text">
+                    {description}
+                </p>
+            </Link>
+        </article>
+    );
+}
+
+const columns: WorkCardProps[][] = [
+    [
+        {
+            href: "/works/inclusivio",
+            src: "/images/inclusivio/inclusivio.png",
+            alt: "Inclusivio project preview",
+            title: "Inclusivio",
+            description: "Accessibility compliance dashboard and landing UX",
+            cellClassName: "border-b-[1.5px] border-r-[1.5px]",
+        },
+        {
+            href: "/works/talo",
+            src: "/images/talo.gif",
+            alt: "Talo project preview",
+            title: "Talo",
+            description: "Job board and ATS with AI-assisted workflows",
+            cellClassName: "border-r-[1.5px]",
+        },
+    ],
+    [
+        {
+            href: "/works/sortee",
+            src: "/images/Sortee.png",
+            alt: "Sortee project preview",
+            title: "Sortee",
+            description: "Pitch decks and brand exploration for a startup",
+            cellClassName: "border-b-[1.5px] border-r-[1.5px]",
+        },
+        {
+            href: "/works/juniper",
+            src: "/images/Juniper.png",
+            alt: "Juniper project preview",
+            title: "Juniper",
+            description: "Apartment search, onboarding, and investment flows",
+            cellClassName: "border-l-[1.5px] border-r-[1.5px]",
+        },
+    ],
+    [
+        {
+            href: "/works/medmelanin",
+            src: "/images/MedMelanin.png",
+            alt: "Med Melanin app preview",
+            title: "MedMelanin App",
+            description: "Health advocacy for women of colour—web and mobile",
+            cellClassName: "border-b-[1.5px] border-r-[1.5px]",
+        },
+        {
+            href: "/works/tally",
+            src: "/images/Tally.png",
+            alt: "Tally project preview",
+            title: "Tally",
+            description: "Personal finance tracking with AI-assisted insights",
+            cellClassName: "border-r-[1.5px]",
+        },
+    ],
+];
 
 export default function SelectedWorks() {
     return (
-        <div className="w-full max-w-5xl border-r-[1.5px] border-l-[1.5px] border-b-[1.5px] border-dark-border mx-auto grid grid-cols-1 md:grid-cols-3">
-            <div className="flex flex-col h-full col-span-1">
-                <div className="relative w-full p-4 border-r-[1.5px] border-b-[1.5px] border-dark-border group cursor-pointer">
-                    <div className="relative w-full aspect-[4/3] overflow-hidden">
-                        <Image
-                            src="/images/inclusivio.png"
-                            alt="Inclusivio"
-                            fill
-                            className="object-cover w-full h-full"
-                        />
-                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-all duration-300 flex items-center justify-center">
-                            <Link href="/works/inclusivio" className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <button className=" text-white border border-white px-3 py-1 rounded-full font-medium hover:bg-white hover:text-black transition-colors duration-200">
-                                    View Details
-                                </button>
-                            </Link>
-                        </div>
-                    </div>
-                    <h4 className="text-primary-text tracking-wide text-xl font-medium leading-tight mt-4">
-                        Inclusivio
-                    </h4>
-                    <p className="text-secondary-text text-[17px] font-medium leading-tight mt-1">
-                        Accessibility compliance checker with full dashboard UX
-                    </p>
+        <div className="mx-auto grid w-full max-w-5xl grid-cols-1 border-b-[1.5px] border-l-[1.5px] border-r-[1.5px] border-dark-border md:grid-cols-3">
+            {columns.map((column, colIndex) => (
+                <div key={colIndex} className="flex h-full flex-col">
+                    {column.map((work) => (
+                        <WorkCard key={work.href} {...work} />
+                    ))}
                 </div>
-
-                <div className="relative w-full p-4 border-dark-border group cursor-pointer">
-                    <div className="relative w-full aspect-[4/3] overflow-hidden">
-                        <Image
-                            src="/images/Talo.GIF"
-                            alt="Talo"
-                            fill
-                            className="object-cover w-full h-full"
-                        />
-                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-all duration-300 flex items-center justify-center">
-                            <Link href="/works/talo" className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <button className=" text-white border border-white px-3 py-1 rounded-full font-medium hover:bg-white hover:text-black transition-colors duration-200">
-                                    View Details
-                                </button>
-                            </Link>
-                        </div>
-                    </div>
-                    <h4 className="text-primary-text tracking-wide text-xl font-medium leading-tight mt-4">
-                        Talo
-                    </h4>
-                    <p className="text-secondary-text text-[17px] font-medium leading-tight mt-1">
-                        Job search and ATS platform with AI insights
-                    </p>
-                </div>
-            </div>
-
-            <div className="flex flex-col h-full col-span-1">
-                <div className="relative w-full p-4 border-r-[1.5px] border-b-[1.5px] border-dark-border group cursor-pointer">
-                    <div className="relative w-full aspect-[4/3] overflow-hidden">
-                        <Image
-                            src="/images/Sortee.png"
-                            alt="Sortee"
-                            fill
-                            className="object-cover w-full h-full"
-                        />
-                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-all duration-300 flex items-center justify-center">
-                            <Link href="/works/sortee" className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <button className=" text-white border border-white px-3 py-1 rounded-full font-medium hover:bg-white hover:text-black transition-colors duration-200">
-                                    View Details
-                                </button>
-                            </Link>
-                        </div>
-                    </div>
-                    <h4 className="text-primary-text tracking-wide text-xl font-medium leading-tight mt-4">
-                        Sortee
-                    </h4>
-                    <p className="text-secondary-text text-[17px] font-medium leading-tight mt-1">
-                        Pitch Decks + Brand Design Exploration for a startup
-                    </p>
-                </div>
-
-                <div className="relative w-full p-4 border-r-[1.5px] border-l-[1.5px] border-dark-border group cursor-pointer">
-                    <div className="relative w-full aspect-[4/3] overflow-hidden">
-                        <Image
-                            src="/images/Juniper.png"
-                            alt="Juniper"
-                            fill
-                            className="object-cover w-full h-full"
-                        />
-                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-all duration-300 flex items-center justify-center">
-                            <Link href="/works/juniper" className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <button className=" text-white border border-white px-3 py-1 rounded-full font-medium hover:bg-white hover:text-black transition-colors duration-200">
-                                    View Details
-                                </button>
-                            </Link>
-                        </div>
-                    </div>
-                    <h4 className="text-primary-text tracking-wide text-xl font-medium leading-tight mt-4">
-                        Juniper
-                    </h4>
-                    <p className="text-secondary-text text-[17px] font-medium leading-tight mt-1">
-                        Smart apartment search with onboarding & investment tools
-                    </p>
-                </div>
-            </div>
-
-            <div className="flex flex-col h-full col-span-1">
-                <div className="relative w-full p-4 border-r-[1.5px] border-b-[1.5px] border-dark-border group cursor-pointer">
-                    <div className="relative w-full aspect-[4/3] overflow-hidden">
-                        <Image
-                            src="/images/MedMelanin.png"
-                            alt="MedMelanin App"
-                            fill
-                            className="object-cover w-full h-full"
-                        />
-                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-all duration-300 flex items-center justify-center">
-                            <Link href="/works/medmelanin" className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <button className=" text-white border border-white px-3 py-1 rounded-full font-medium hover:bg-white hover:text-black transition-colors duration-200">
-                                    View Details
-                                </button>
-                            </Link>
-                        </div>
-                    </div>
-                    <h4 className="text-primary-text tracking-wide text-xl font-medium leading-tight mt-4">
-                        MedMelanin App
-                    </h4>
-                    <p className="text-secondary-text text-[17px] font-medium leading-tight mt-1">
-                        Health advocacy platform designed for women of colour
-                    </p>
-                </div>
-
-                <div className="relative w-full p-4 border-r-[1.5px] border-dark-border group cursor-pointer">
-                    <div className="relative w-full aspect-[4/3] overflow-hidden">
-                        <Image
-                            src="/images/Tally.png"
-                            alt="Tally"
-                            fill
-                            className="object-cover w-full h-full"
-                        />
-                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-all duration-300 flex items-center justify-center">
-                            <Link href="/works/tally" className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <button className=" text-white border border-white px-3 py-1 rounded-full font-medium hover:bg-white hover:text-black transition-colors duration-200">
-                                    View Details
-                                </button>
-                            </Link>
-                        </div>
-                    </div>
-                    <h4 className="text-primary-text tracking-wide text-xl font-medium leading-tight mt-4">
-                        Tally
-                    </h4>
-                    <p className="text-secondary-text text-[17px] font-medium leading-tight mt-1">
-                        Personal finance tracker with AI insights
-                    </p>
-                </div>
-            </div>
+            ))}
         </div>
     );
-} 
+}

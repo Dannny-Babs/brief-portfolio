@@ -49,19 +49,11 @@ export default function About() {
                 "flex flex-row items-center w-full justify-between"
             )}>
                 <div className="flex flex-col gap-2">
-                    <p className="text-primary-text text-lg leading-tight tracking-wide">
-                        Hi, I&apos;m Daniel, a designer and developer based in Toronto. I love bringing ideas to life, whether it&apos;s through clean design systems, functional code, or a bit of both. I overthink layouts for fun, and I&apos;m a social butterfly with a curious mind.
-
-                        My journey started with HTML/CSS and Adobe XD, which led me deep into the worlds of product design and frontend development. From my first portfolio site to building mobile apps with Flutter and working with SaaS startups, every project has taught me something new about people, patterns, and pixels.
+                    <p className="text-primary-text text-xl leading-relaxed tracking-wide">
+                        I&apos;m Daniel—designer and developer in Toronto. I care about clear systems, solid code, and layouts that survive a second look.
                         <br />
                         <br />
-
-                        For me, great design is about more than aesthetics—it&apos;s about solving real problems and delivering value. It&apos;s about putting the user first and leveraging technology to make life better.
-                        <br />
-                        <br />
-
-
-                        Outside of screens, you can find me exploring new places, getting lost in a good book, or listening to music or exploring Pinterest. I&apos;m always looking for ways to turn everyday problems into things that help people.
+                        I started with HTML/CSS and XD, then went deep on product UI, Flutter, and SaaS work. Good design, for me, is solving real problems with the user in front. Off-screen: books, music, travel, and turning messy ideas into useful things.
                     </p>
                 </div>
             </div>
@@ -82,20 +74,63 @@ export default function About() {
             )}>
                 <div className="flex flex-col gap-2 w-full">
                     <h3 className="text-2xl font-medium text-primary-text leading-tight">
-                        Design Engineer - Med Melanin
+                        Software Engineer — Rose Rocket
                     </h3>
                     <div className="flex flex-row items-center justify-between gap-2">
                         <p className="text-secondary-text text-lg leading-tight">
-                            May 2024 - Present
+                            Oct 2025 - Present
                         </p>
                         <p className="text-secondary-text text-lg leading-tight">
                             Toronto, ON
                         </p>
                     </div>
-                    <p className="text-primary-text text-lg leading-tight">
-                        Designed Med Melanin&apos;s mobile and web apps leading user research and testing to create a design system and clean, functional UI.
-                        <br />
-                        <br />
+                    <div className="text-primary-text text-lg leading-tight">
+                        <p>
+                            Forward-deployed, customer-facing engineer on a transportation management system used by logistics teams. I partner with customers and internal teams to scope, build, and ship production features end to end—from RFCs and UX through implementation and deployment.
+                        </p>
+                        <div className="h-3" aria-hidden />
+                        <Accordion type="single" collapsible className="w-full">
+                            <AccordionItem value="rose-rocket-achievements" className="border-none">
+                                <AccordionTrigger className="text-secondary-text text-lg font-medium hover:no-underline py-2">
+                                    Key Achievements
+                                </AccordionTrigger>
+                                <AccordionContent>
+                                    <ul className="list-disc list-inside pl-5 mt-1 space-y-1 text-lg leading-tight md:leading-relaxed tracking-loose text-primary-text">
+                                        <li>Operated as a forward-deployed engineer working directly with customers to turn operational needs into shipped product in production.</li>
+                                        <li>Owned and delivered 5+ customer-facing features end to end (RFCs through deployment), including bulk document download, barcode generation, custom email configuration, and HubSpot-related integrations.</li>
+                                        <li>Built a bulk document download flow using queues, zipping, and time-limited access so customers could retrieve large batches without repeated support intervention.</li>
+                                        <li>Shipped configurable barcode generation across many symbologies (e.g. Code 128, Code 39, QR, Data Matrix) with sizing and placement options for document workflows.</li>
+                                        <li>Implemented custom email sending via Mailgun so customers could send from their own domains and aliases, with improved reply handling.</li>
+                                        <li>Resolved 40+ production and customer-reported issues in live environments, coordinating with Support, Engineering, and GTM to shorten turnaround on requests.</li>
+                                        <li>Contributed to test migration and authored new tests for safer releases; delivered customer-specific and paid-tier functionality tied to client implementations.</li>
+                                    </ul>
+                                </AccordionContent>
+                            </AccordionItem>
+                        </Accordion>
+                    </div>
+                </div>
+            </div>
+            <div className={cn(
+                "max-w-5xl border-r-[1.5px] border-l-[1.5px] border-b-[1.5px] border-dark-border mx-auto p-5",
+                "flex flex-row items-center w-full justify-between"
+            )}>
+                <div className="flex flex-col gap-2 w-full">
+                    <h3 className="text-2xl font-medium text-primary-text leading-tight">
+                        Design Engineer — Med Melanin
+                    </h3>
+                    <div className="flex flex-row items-center justify-between gap-2">
+                        <p className="text-secondary-text text-lg leading-tight">
+                            May 2024 - Sep 2025
+                        </p>
+                        <p className="text-secondary-text text-lg leading-tight">
+                            Toronto, ON
+                        </p>
+                    </div>
+                    <div className="text-primary-text text-lg leading-tight">
+                        <p>
+                            Led design and development for Med Melanin&apos;s mobile and web apps, running user research and testing to build a design system and a clear, functional UI for patients and clinicians.
+                        </p>
+                        <div className="h-3" aria-hidden />
                         <Accordion type="single" collapsible className="w-full">
                             <AccordionItem value="med-melanin-achievements" className="border-none">
                                 <AccordionTrigger className="text-secondary-text text-lg font-medium hover:no-underline py-2">
@@ -112,7 +147,7 @@ export default function About() {
                                 </AccordionContent>
                             </AccordionItem>
                         </Accordion>
-                    </p>
+                    </div>
                 </div>
             </div>
             <div className={cn(
@@ -131,11 +166,11 @@ export default function About() {
                             Remote - Toronto, ON
                         </p>
                     </div>
-                    <p className="text-primary-text text-lg leading-tight">
-                        Worked as a designer and developer with early-stage founders and lean startup teams.
-                        I&apos;ve led the end-to-end design and development of production-grade websites, mobile apps, internal dashboards, and custom CMS platforms. My work spans web performance, SEO optimization, responsive front-end engineering, and co-creating internal design systems that scale.
-                        <br />
-                        <br />
+                    <div className="text-primary-text text-lg leading-tight">
+                        <p>
+                            Worked as a designer and developer with early-stage founders and lean startup teams. I&apos;ve led the end-to-end design and development of production-grade websites, mobile apps, internal dashboards, and custom CMS platforms. My work spans web performance, SEO optimization, responsive front-end engineering, and co-creating internal design systems that scale.
+                        </p>
+                        <div className="h-3" aria-hidden />
                         <Accordion type="single" collapsible className="w-full">
                             <AccordionItem value="freelance-achievements" className="border-none">
                                 <AccordionTrigger className="text-secondary-text text-lg font-medium hover:no-underline py-2">
@@ -153,7 +188,7 @@ export default function About() {
                                 </AccordionContent>
                             </AccordionItem>
                         </Accordion>
-                    </p>
+                    </div>
                 </div>
             </div>
             <div className={cn(

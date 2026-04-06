@@ -12,9 +12,39 @@ const darkerGrotesque = Darker_Grotesque({
   subsets: ["latin"],
 });
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
+
+const defaultTitle = "Daniel Babalola — Software Engineer";
+const defaultDescription =
+  "Software engineer based in Toronto. Forward-deployed at Rose Rocket, shipping customer-facing features for logistics. Background in design and healthcare SaaS.";
+
 export const metadata: Metadata = {
-  title: "Daniel Babalola - Design Engineer",
-  description: "Design engineer based in Toronto, building products that are both functional and beautiful. Currently working at Med Melanin creating user-centered solutions for healthcare.",
+  metadataBase: new URL(siteUrl),
+  title: defaultTitle,
+  description: defaultDescription,
+  openGraph: {
+    title: defaultTitle,
+    description: defaultDescription,
+    url: "/",
+    siteName: "Daniel Babalola",
+    locale: "en_CA",
+    type: "website",
+    images: [
+      {
+        url: "/images/profile.png",
+        width: 400,
+        height: 400,
+        alt: "Daniel Babalola",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: defaultTitle,
+    description: defaultDescription,
+  },
 };
 
 export default function RootLayout({
