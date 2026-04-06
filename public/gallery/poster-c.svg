@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="c-title">
+  <title id="c-title">Soft radial glow</title>
+  <defs>
+    <radialGradient id="gc" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#5c4a3d"/>
+      <stop offset="100%" stop-color="#0a0705"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#gc)"/>
+  <line x1="0" y1="480" x2="800" y2="420" stroke="#e8dcc8" stroke-opacity="0.15" stroke-width="3"/>
+  <line x1="100" y1="600" x2="700" y2="80" stroke="#c4a574" stroke-opacity="0.12" stroke-width="2"/>
+</svg>

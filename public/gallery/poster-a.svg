@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="a-title">
+  <title id="a-title">Warm diagonal gradient panel</title>
+  <defs>
+    <linearGradient id="ga" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3d2a22"/>
+      <stop offset="100%" stop-color="#0d0806"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#ga)"/>
+  <circle cx="620" cy="120" r="90" fill="#c4a574" opacity="0.25"/>
+  <rect x="80" y="380" width="280" height="16" rx="4" fill="#e8dcc8" opacity="0.35"/>
+</svg>

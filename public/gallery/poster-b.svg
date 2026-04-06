@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="b-title">
+  <title id="b-title">Muted blocks composition</title>
+  <rect width="800" height="600" fill="#120c09"/>
+  <rect x="60" y="80" width="320" height="440" rx="8" fill="#2a1e18" stroke="#5c4a3d" stroke-width="2"/>
+  <rect x="420" y="200" width="300" height="200" rx="8" fill="#c4a574" opacity="0.2"/>
+  <path d="M420 420 L720 420 L720 520 L420 520 Z" fill="#e8dcc8" opacity="0.12"/>
+</svg>
